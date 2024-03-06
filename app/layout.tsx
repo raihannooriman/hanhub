@@ -12,7 +12,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Hanhub | Raihan's Website",
-  description: "Ini adalah web pribadi Raihan",
+  description: "Web Raihan",
 };
 
 export default function RootLayout({
