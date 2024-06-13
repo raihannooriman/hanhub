@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import SectionHeading from "./section-heading";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
@@ -9,6 +8,18 @@ import toast from "react-hot-toast";
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact");
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    const { error } = await sendEmail(formData);
+    if (error) {
+      toast.error(error);
+    } else {
+      toast.success("Email sent successfully");
+    }
+  };
+  const inputClassNames =
+    "rounded-lg borderBlack p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none";
   return (
     <motion.section
       id="contact"
@@ -29,25 +40,18 @@ export default function Contact() {
       </p>
       <form
         className="mt-10 flex flex-col dark:text-black"
-        action={async (formData) => {
-          const { error } = await sendEmail(formData);
-          if (error) {
-            toast.error(error);
-            return;
-          }
-          toast.success("Email send successfully");
-        }}
+        onSubmit={handleSubmit}
       >
         <input
           type="email"
           name="senderEmail"
           required
           maxLength={500}
-          className="h-14 px-4 rounded-lg borderBlack p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
+          className={`h-14 px-4 ${inputClassNames}`}
           placeholder="Your email"
         />
         <textarea
-          className="h-52 my-3 rounded-lg borderBlack p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
+          className={`h-52 my-3 ${inputClassNames}`}
           name="message"
           placeholder="Your message"
           required

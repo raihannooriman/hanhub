@@ -1,6 +1,5 @@
 // "use client";
 
-// import React from "react";
 // import SectionHeading from "./section-heading";
 // import { experiencesData } from "@/lib/data";
 // import { useSectionInView } from "@/lib/hooks";
