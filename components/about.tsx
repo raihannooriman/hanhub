@@ -17,15 +17,15 @@ export default function About() {
     >
       <SectionHeading>ABOUT ME</SectionHeading>
       <p className="mb-3">
-        After graduating with a degree in{" "}
-        <span className="font-medium">Mathematics</span>, I decided to pursue my
-        passion for programming. I enrolled in a coding bootcamp and learned{" "}
-        <span className="font-medium">full-stack web development</span>.{" "}
-        <span className="italic">My favorite part of programming</span> is the
-        problem-solving aspect. I <span className="underline">love</span> the
-        feeling of finally cracking a solution. I primarily use{" "}
+        After earning a degree in{" "}
+        <span className="font-medium">Mathematics</span>, I embraced my passion
+        for programming by attending a coding bootcamp, where I honed my skills
+        in <span className="font-medium">full-stack web development</span>. The
+        problem-solving aspect of programming particularly captivates me;
+        there’s nothing quite like the thrill of unraveling a complex challenge.
+        My toolkit includes{" "}
         <span className="font-medium">
-          React, Next.js, Node.js, Go, Python, Typescript, and MongoDB
+          Node.js, React, TypeScript, Go, Python, and NoSQL databases
         </span>{" "}
         for my development projects, and I'm always eager to learn new
         technologies. Currently, I'm looking for a{" "}
@@ -35,8 +35,8 @@ export default function About() {
       <p>
         <span className="italic">When I'm not coding</span>, I enjoy playing
         online games, watching anime or movies, and reading. I also enjoy{" "}
-        <span className="font-medium">learning new things</span>. I am currently
-        learning about{" "}
+        <span className="font-medium">learning new things</span>. Currently, I
+        am delving into{" "}
         <span className="font-medium">history, politics, and philosophy</span>.
       </p>
     </motion.section>

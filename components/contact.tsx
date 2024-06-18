@@ -8,23 +8,22 @@ import toast from "react-hot-toast";
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact");
+
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
     const { error } = await sendEmail(formData);
-    if (error) {
-      toast.error(error);
-    } else {
-      toast.success("Email sent successfully");
-    }
+    error ? toast.error(error) : toast.success("Email sent successfully");
   };
+
   const inputClassNames =
-    "rounded-lg borderBlack p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none";
+    "rounded-lg border p-4 dark:bg-white/80 dark:focus:bg-opacity-100 transition-all dark:outline-none";
+
   return (
     <motion.section
       id="contact"
       ref={ref}
-      className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center"
+      className="mb-20 sm:mb-28 w-full max-w-[38rem] text-center"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
