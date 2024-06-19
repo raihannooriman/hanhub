@@ -1,4 +1,10 @@
-import corpcommentImg from "@/public/corpcomment.png";
+import Chatins from "@/public/Chatins.png";
+import Hantoko from "@/public/Hantoko.png";
+import WingsOn from "@/public/WIngsOn.png";
+import PasswordGenerator from "@/public/PasswordGenerator.png";
+import MTSWebsite from "@/public/MTSWebsite.png";
+import Snake from "@/public/Snake.png";
+import { link } from "fs";
 
 export const links = [
   {
@@ -56,11 +62,57 @@ export const links = [
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "Hantoko",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind"],
-    imageUrl: corpcommentImg,
+      "Creating a simple personal online store website using React, Next.js, TypeScript, Tailwind, and Firebase.",
+    tags: ["React", "Next.js", "Typescript", "Firebase", "Tailwind"],
+    imageUrl: Hantoko,
+    link: "https://hantoko.vercel.app",
+  },
+  {
+    title: "Chatins",
+    description:
+      "Creating a simple chat website using TypeScript, Next.js, Tailwind, Prisma, MongoDB, and Pusher.",
+    tags: [
+      "React",
+      "Typescript",
+      "Next.js",
+      "MongoDB",
+      "Tailwind",
+      "Prisma",
+      "Pusher",
+    ],
+    imageUrl: Chatins,
+    link: "https://chatins.vercel.app",
+  },
+  {
+    title: "WingsOn",
+    description:
+      "Final Project for Synrgy Academy Batch 6 Fullstack Web Developer Bootcamp: an online ticket booking website.",
+    tags: ["React", "Vite", "Typescript", "Tailwind"],
+    imageUrl: WingsOn,
+    link: "https://wings-on.netlify.app/",
+  },
+  {
+    title: "Password Generator",
+    description: "Creating a simple password generator website.",
+    tags: ["HTML", "Javascript", "Tailwind"],
+    imageUrl: PasswordGenerator,
+    link: "https://raihannooriman.github.io/password-generator/",
+  },
+  {
+    title: "MTS Website",
+    description: "Solving bugs on school website",
+    tags: ["React", "ChakraUi", "Firebase", "Tailwind"],
+    imageUrl: MTSWebsite,
+    link: "https://mts-miftahul-ulum.web.app/",
+  },
+  {
+    title: "Snake",
+    description: "Creating a simple snake game with React Native.",
+    tags: ["React Native", "Typescript", "Expo"],
+    imageUrl: Snake,
+    link: "https://github.com/raihannooriman/snake-react-native",
   },
 ] as const;
 

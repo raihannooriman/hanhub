@@ -10,7 +10,7 @@ const Projects: React.FC = () => {
   return (
     <section ref={ref} id="projects" className="scroll-mt-28 mb-28">
       <SectionHeading>My projects</SectionHeading>
-      <div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-10">
         {projectsData.map((project, index) => (
           <Project key={index} {...project} />
         ))}
