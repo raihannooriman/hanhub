@@ -32,13 +32,6 @@ export default function About() {
         <span className="font-medium">full-time position</span> as a software
         developer.
       </p>
-      <p>
-        <span className="italic">When I'm not coding</span>, I enjoy playing
-        online games, watching anime or movies, and reading. I also enjoy{" "}
-        <span className="font-medium">learning new things</span>. Currently, I
-        am delving into{" "}
-        <span className="font-medium">history, politics, and philosophy</span>.
-      </p>
     </motion.section>
   );
 }
