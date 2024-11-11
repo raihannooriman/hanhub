@@ -126,6 +126,7 @@ export const skillsData = [
   "Redis",
   "Prisma",
   "Docker",
+  "Elasticsearch",
   "Go",
   "Python",
   "Tex"
